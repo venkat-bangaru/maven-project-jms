@@ -29,8 +29,8 @@
 						<uri>https://anypoint.mulesoft.com</uri>
 						<muleVersion>3.9.2</muleVersion>
 						<username>venkatbangaru</username>
-						<password>Venkat123</password>
-						<applicationName>maven-project-venkat-jms</applicationName>
+						<password>Venkat@t123</password>
+						<applicationName>maven-project-jms-venkat</applicationName>
 						<businessGroup>LnD</businessGroup>
 						<environment>DEV</environment>
 						<properties>
