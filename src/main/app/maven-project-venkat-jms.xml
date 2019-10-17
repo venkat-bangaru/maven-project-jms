@@ -36,7 +36,7 @@ http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/m
 			<jms:transaction action="NONE" />
 		</jms:outbound-endpoint>
 	</flow>
-	<flow name="maven-project-venkat-jmsFlow1">
+	<flow name="logFlights">
 		<jms:inbound-endpoint queue="flights"
 			connector-ref="Active_MQ" doc:name="JMS">
 			<jms:transaction action="NONE" />
@@ -44,12 +44,9 @@ http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/m
 		<logger level="INFO" doc:name="Logger"
 			message="Logger 2 Values : #[message.payload]" />
 	</flow>
-
-
 	<flow name="mavenFlow">
 		<http:listener config-ref="HTTP_Listener_Configuration"
 			path="/getData" allowedMethods="GET" doc:name="HTTP" />
 		<set-payload value="#[&quot;Hello Maven&quot;]" doc:name="Set Payload" />
 	</flow>
-
 </mule>
